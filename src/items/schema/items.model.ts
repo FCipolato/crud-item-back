@@ -6,7 +6,6 @@ export const ItemSchema = new mongoose.Schema({
 });
 
 export interface Item {
-  id: string;
   name: string;
-  age: number;
+  description: string;
 }
