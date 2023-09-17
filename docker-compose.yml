@@ -6,11 +6,6 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    environment:
-      DATABASE_NAME: crud-item
-      DATABASE_USER: root
-      DATABASE_PASS: root
-      DATABASE_URI: mongodb://database:27017
     ports:
       - '3000:3000'
     depends_on:
@@ -18,7 +13,7 @@ services:
 
   # start the mongodb service as container
   database:
-    image: mongo:7.0
+    image: mongo
     container_name: mongodb
     restart: always
     ports:

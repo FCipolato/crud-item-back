@@ -9,7 +9,7 @@ import { ConfigModule } from '@nestjs/config';
   imports: [
     ConfigModule.forRoot(),
     MongooseModule.forRoot(
-      `mongodb+srv://${process.env.USER_MONGO}:${process.env.PASS_MONGO}@cluster0.hlsvjqk.mongodb.net/crud-item?retryWrites=true&w=majority`,
+      `mongodb://root:root@${process.env.MONGO_DATABASE}:27017`,
     ),
     ItemsModule,
     AuthModule,
